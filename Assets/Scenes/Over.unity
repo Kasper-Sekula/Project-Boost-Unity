@@ -489,18 +489,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1239029810, guid: d4384e0aaafcdfa4bb5cc501549b9e54, type: 3}
-      propertyPath: mainEngine
-      value: 
-      objectReference: {fileID: 8300000, guid: 5c9c3facf615d854987760607c9469d0, type: 3}
-    - target: {fileID: 1239029817, guid: d4384e0aaafcdfa4bb5cc501549b9e54, type: 3}
-      propertyPath: crash
-      value: 
-      objectReference: {fileID: 8300000, guid: 695f9d95f0d1d02479e74baf22769ad5, type: 3}
-    - target: {fileID: 1239029817, guid: d4384e0aaafcdfa4bb5cc501549b9e54, type: 3}
-      propertyPath: succcess
-      value: 
-      objectReference: {fileID: 8300000, guid: 83ef148405ae5cd41adebe39e52822e6, type: 3}
     - target: {fileID: 108198477242072944, guid: d4384e0aaafcdfa4bb5cc501549b9e54, type: 3}
       propertyPath: m_RootOrder
       value: 5

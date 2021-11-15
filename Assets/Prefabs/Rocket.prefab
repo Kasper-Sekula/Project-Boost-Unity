@@ -127,6 +127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 677f449cd46bd4e4da374a6e7d3e48a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainEngine: {fileID: 8300000, guid: 5c9c3facf615d854987760607c9469d0, type: 3}
   rocketThrust: 1000
   rotationThrust: 100
 --- !u!114 &1239029817
@@ -142,6 +143,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelLoadDelay: 1
+  succcess: {fileID: 8300000, guid: 83ef148405ae5cd41adebe39e52822e6, type: 3}
+  crash: {fileID: 8300000, guid: 695f9d95f0d1d02479e74baf22769ad5, type: 3}
 --- !u!82 &7226234396768022786
 AudioSource:
   m_ObjectHideFlags: 0

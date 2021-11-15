@@ -9,11 +9,18 @@ public class CollisionHandler : MonoBehaviour
 
     AudioSource audioSource;
 
+    bool isTransitioning = false;
+
     void Start() {
         audioSource = GetComponent<AudioSource>();
     }
-    private void OnCollisionEnter(Collision other) 
+    void OnCollisionEnter(Collision other) 
     {
+        if (isTransitioning)
+        {
+            return;
+        }
+
         switch (other.gameObject.tag) 
         {
             case "Friendly":
@@ -33,6 +40,8 @@ public class CollisionHandler : MonoBehaviour
 
     void StartSuccessSequence()
     {
+        isTransitioning = true;
+        audioSource.Stop();
         audioSource.PlayOneShot(succcess);
 
         GetComponent<Movement>().enabled = false;
@@ -41,6 +50,8 @@ public class CollisionHandler : MonoBehaviour
 
     void StartCrashSequence()
     {
+        isTransitioning = true;
+        audioSource.Stop();
         audioSource.PlayOneShot(crash);
 
         GetComponent<Movement>().enabled = false;
@@ -55,6 +66,7 @@ public class CollisionHandler : MonoBehaviour
 
     void LoadNextLevel()
     {
+        Debug.Log("Loading next level");
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         int nextSceneIndex = currentSceneIndex + 1;
         if (nextSceneIndex == SceneManager.sceneCountInBuildSettings)
